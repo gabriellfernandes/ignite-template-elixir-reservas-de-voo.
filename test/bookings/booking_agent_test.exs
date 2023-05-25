@@ -7,7 +7,7 @@ defmodule Flightex.Bookings.AgentTest do
 
   describe "save/1" do
     setup do
-      Flightex.start_agent()
+      Flightex.start_agents()
 
       :ok
     end

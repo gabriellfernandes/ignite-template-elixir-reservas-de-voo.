@@ -6,7 +6,7 @@ defmodule Flightex.Bookings.CreateOrUpdateTest do
 
   describe "call/1" do
     setup do
-      Flightex.start_agent()
+      Flightex.start_agents()
 
       :ok
     end
@@ -18,10 +18,10 @@ defmodule Flightex.Bookings.CreateOrUpdateTest do
         local_destination: "Bananeiras",
         user_id: "e9f7d281-b9f2-467f-9b34-1b284ed58f9e"
       }
+
       :users
       |> build(id: "e9f7d281-b9f2-467f-9b34-1b284ed58f9e")
       |> UserAgent.save()
-
 
       {:ok, uuid} = CreateOrUpdate.call(params)
 

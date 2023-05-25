@@ -7,7 +7,7 @@ defmodule Flightex.Users.AgentTest do
 
   describe "save/1" do
     setup do
-      Flightex.start_agent()
+      Flightex.start_agents()
 
       id = UUID.uuid4()
       cpf = "12345678900"
@@ -31,7 +31,7 @@ defmodule Flightex.Users.AgentTest do
 
   describe "get/1" do
     setup do
-      Flightex.start_agent()
+      Flightex.start_agents()
 
       id = UUID.uuid4()
       cpf = "12345678900"

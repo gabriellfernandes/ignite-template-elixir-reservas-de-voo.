@@ -5,7 +5,7 @@ defmodule Flightex.Users.CreateOrUpdateTest do
 
   describe "call/1" do
     setup do
-      Flightex.start_agent()
+      Flightex.start_agents()
       # O Agent.start_link vai iniciar os 2 agents antes do teste
       # Deve ser implementado para os testes passarem
       :ok
