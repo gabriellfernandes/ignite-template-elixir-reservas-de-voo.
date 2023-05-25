@@ -7,7 +7,7 @@ defmodule Flightex.Bookings.AgentTest do
 
   describe "save/1" do
     setup do
-      BookingsAgent.start_link(%{})
+      Flightex.start_agent()
 
       :ok
     end

@@ -7,7 +7,7 @@ defmodule Flightex.Users.AgentTest do
 
   describe "save/1" do
     setup do
-      UserAgent.start_link(%{})
+      Flightex.start_agent()
 
       id = UUID.uuid4()
       cpf = "12345678900"
@@ -22,7 +22,6 @@ defmodule Flightex.Users.AgentTest do
 
       response = UserAgent.get(cpf)
 
-
       expected_response =
         {:ok, %Flightex.Users.User{cpf: cpf, email: "jp@banana.com", id: id, name: "Jp"}}
 
@@ -32,7 +31,7 @@ defmodule Flightex.Users.AgentTest do
 
   describe "get/1" do
     setup do
-      UserAgent.start_link(%{})
+      Flightex.start_agent()
 
       id = UUID.uuid4()
       cpf = "12345678900"
